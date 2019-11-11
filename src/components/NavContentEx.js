@@ -38,10 +38,25 @@ const list = [
     external: false
   }
 ];
+
+function ListItemTextWithOpenInNewIcon(text) {
+  return (
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      height: '20px'
+    }}>
+      <p>{text}</p>
+      &ensp; &ensp;
+      <Icon style={{fontSize: '18px'}}>open_in_new</Icon>
+    </div>  
+  );
+};
+
 const NavContentEx = () => (
   <List>
     {list.map(({ primaryText, icon, url, external }, i) => (
-      <ListItem 
+      <ListItem
         key={primaryText}
         selected={url === window.location.pathname}
         button
@@ -51,10 +66,18 @@ const NavContentEx = () => (
         <ListItemIcon>
           <Icon>{icon}</Icon>
         </ListItemIcon>
-        <ListItemText
-          primary={primaryText}
-          primaryTypographyProps={{ noWrap: true }}
-        />
+        {external && (
+          <ListItemText
+            primary={ListItemTextWithOpenInNewIcon(primaryText)}
+            primaryTypographyProps={{ noWrap: true }}
+          />
+        )}
+        {!external && (
+          <ListItemText
+            primary={primaryText}
+            primaryTypographyProps={{ noWrap: true }}
+          />
+        )}
       </ListItem>
     ))}
     <Divider style={{ margin: "12px 0" }} />
@@ -66,7 +89,7 @@ const NavContentEx = () => (
         <Icon>mail</Icon>
       </ListItemIcon>
       <ListItemText
-        primary={"お問い合わせ"}
+        primary={ListItemTextWithOpenInNewIcon("お問い合わせ")}
         primaryTypographyProps={{ noWrap: true }}
       />
     </ListItem>
