@@ -1,5 +1,6 @@
 {
   "name": "selelab_web",
+  "homepage": "https://selelab.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
