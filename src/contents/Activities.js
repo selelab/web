@@ -39,8 +39,11 @@ const Activities = ({ classes }) => {
         実績
     </Typography>
       <Typography weight={"bold"} variant={"h6"} gutterBottom>
-        2018年度
+        2019年度
     </Typography>
+      <Typography>
+        ICPCアジア地区横浜大会出場(1次予選通過)<br />
+      </Typography>
       <Typography>
         パワーエレクトロニクス動画コンテスト【優秀賞】<br />
         <div class="youtube_wrapper">
@@ -48,7 +51,7 @@ const Activities = ({ classes }) => {
         </div>
       </Typography>
       <Typography weight={"bold"} variant={"h6"} gutterBottom>
-        2019年度
+        2018年度
     </Typography>
       <Typography>
         ソフィアサマーハッカソン【最優秀賞】<br />
