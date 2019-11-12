@@ -34,7 +34,7 @@ const list = [
   {
     primaryText: "ログイン",
     icon: "lock",
-    url: "/login",
+    url: "/internal/login.php",
     external: false
   }
 ];
