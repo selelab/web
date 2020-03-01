@@ -28,7 +28,8 @@ const Events = ({ classes }) => {
         2019年度
       </Typography>
       <Typography indent={"small"}>
-        5月 プログラミング講座 <a href="https://github.com/haruka-kb/elelab/find/master">Github</a>
+        2019年5月 プログラミング講座 <a href="https://github.com/haruka-kb/elelab/find/master">Github</a> <br/>
+        2020年2月 草津合宿 1年生向けに<a href="/kusatsu/app">WEBアプリケーション</a>を作るハッカソンを開催しました。<br/>
       </Typography>
     </div>
   )
