@@ -34,7 +34,7 @@ const list = [
   {
     primaryText: "ログイン",
     icon: "lock",
-    url: "/kusatsu/login.php",
+    url: "/kusatsu/admin",
     external: false
   }
 ];
