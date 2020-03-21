@@ -76,42 +76,42 @@ function App() {
           <Typography variant={"h2"}>Changing Preset...</Typography>
         </div>
       ) : (
-        <Root config={presets[preset]}>
-          <CssBaseline />
-          <Header style={{background: "#333"}}>
-            <Toolbar>
-              <CollapseBtn
-                component={IconButton}
-                className={headerStyles.leftTrigger}
-                style={{color: "#ddd"}}
-              >
-                <CollapseIcon />
-              </CollapseBtn>
-              <SidebarTrigger
-                className={headerStyles.leftTrigger}
-                style={{color: "#ddd"}}
-              >
-                <SidebarTriggerIcon />
-              </SidebarTrigger>
-              {data.header && <HeaderEx />}
-            </Toolbar>
-          </Header>
-          <HeaderOffset />
-          <Content>
-            {data.content && <ContentEx />}
-          </Content>
-          <Sidebar>
-            {({ collapsed }) => (
-              <>
-                <div className={sidebarStyles.container}>
-                  {data.nav && <NavContentEx />}
-                </div>
-              </>
-            )}
-          </Sidebar>
-          <Footer>{data.footer && <FooterEx />}</Footer>
-        </Root>
-      )}
+          <Root config={presets[preset]}>
+            <CssBaseline />
+            <Header style={{ background: "#333" }}>
+              <Toolbar>
+                <CollapseBtn
+                  component={IconButton}
+                  className={headerStyles.leftTrigger}
+                  style={{ color: "#ddd" }}
+                >
+                  <CollapseIcon />
+                </CollapseBtn>
+                <SidebarTrigger
+                  className={headerStyles.leftTrigger}
+                  style={{ color: "#ddd" }}
+                >
+                  <SidebarTriggerIcon />
+                </SidebarTrigger>
+                {data.header && <HeaderEx />}
+              </Toolbar>
+            </Header>
+            <HeaderOffset />
+            <Content>
+              {data.content && <ContentEx />}
+            </Content>
+            <Sidebar>
+              {({ collapsed }) => (
+                <>
+                  <div className={sidebarStyles.container}>
+                    {data.nav && <NavContentEx />}
+                  </div>
+                </>
+              )}
+            </Sidebar>
+            <Footer>{data.footer && <FooterEx />}</Footer>
+          </Root>
+        )}
     </MuiThemeProvider>
   );
 }

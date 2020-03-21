@@ -48,8 +48,8 @@ function ListItemTextWithOpenInNewIcon(text) {
     }}>
       <p>{text}</p>
       &ensp; &ensp;
-      <Icon style={{fontSize: '18px'}}>open_in_new</Icon>
-    </div>  
+      <Icon style={{ fontSize: '18px' }}>open_in_new</Icon>
+    </div>
   );
 };
 
