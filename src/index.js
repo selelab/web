@@ -12,7 +12,6 @@ import IconButton from "@material-ui/core/IconButton";
 import {
   Root,
   Header,
-  HeaderOffset,
   Sidebar,
   Content,
   Footer,
@@ -29,6 +28,7 @@ import {
   cozyLayoutPreset,
   muiTreasuryPreset
 } from "@mui-treasury/layout";
+import HeaderOffset from "@mui-treasury/layout/components/HeaderOffset";
 
 import NavContentEx from "./components/NavContentEx";
 import HeaderEx from "./components/HeaderEx";
