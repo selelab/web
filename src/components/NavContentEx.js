@@ -16,13 +16,13 @@ const list = [
   {
     primaryText: "活動内容",
     icon: "people",
-    url: "/activities",
+    url: "/activities/",
     external: false
   },
   {
     primaryText: "イベント",
     icon: "event",
-    url: "/events",
+    url: "/events/",
     external: false
   },
   {
@@ -34,7 +34,7 @@ const list = [
   {
     primaryText: "ログイン",
     icon: "lock",
-    url: "/kusatsu/app/#/projects/",
+    url: "/admin/projects/",
     external: false
   }
 ];
