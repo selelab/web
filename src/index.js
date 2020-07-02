@@ -52,9 +52,9 @@ const useHeaderStyles = makeStyles(headerStyles);
 // add presets.create{}() to config props in Root to change the behavior, looking and layout
 // <Root config={presets.createCozyLayout()}> ...
 function App() {
-  const [loading, setLoading] = useState(false);
-  const [preset, setPreset] = useState("createStandardLayout");
-  const [data, setData] = useState({
+  const [loading, ] = useState(false);
+  const [preset, ] = useState("createStandardLayout");
+  const [data, ] = useState({
     header: true,
     nav: true,
     content: true,
