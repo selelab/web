@@ -53,6 +53,7 @@ const styles = ({ breakpoints }) => ({
     color: '#92D050',
   },
   cardSubText: {
+    marginTop: 8,
     padding: '2px 0px 2px 8px',
     borderLeft: '3px solid #92D050',
   },
@@ -93,11 +94,11 @@ const Top = ({ classes }) => {
         <CardMedia
           className={classes.media}
           image="/assets/images/デカテスラ製作機_190403_0036.jpg"
-          title="電子工作班"
+          title="電子工作"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>
           <Typography gutterBottom variant="h5" component="h2">
-            電子工作班
+            電子工作
             <ArrowForwardIosIcon className={classes.arrow}/>
           </Typography>
           <Typography variant="body2" component="p" className={classes.cardSubText}>
@@ -112,11 +113,11 @@ const Top = ({ classes }) => {
         <CardMedia
           className={classes.media}
           image="/assets/images/デカテスラ製作機_190403_0036.jpg"
-          title="プログラミング班"
+          title="プログラミング"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>
           <Typography gutterBottom variant="h5" component="h2">
-            プログラミング班
+            プログラミング
             <ArrowForwardIosIcon className={classes.arrow}/>
           </Typography>
           <Typography variant="body2" component="p" className={classes.cardSubText}>

@@ -14,24 +14,35 @@ const styles = ({ breakpoints }) => ({
       maxWidth: 700
     },
     color: "#fff",
-  }
+  },
+  textGreen: {
+    color: '#92D050',
+  },
+  container: {
+    margin: '20px 0px 20px 0px',
+  },
+
 });
 
 const Activities = ({ classes }) => {
   document.title = '活動内容 | 上智大学エレクトロニクスラボ';
   return (
     <div className={classes.root}>
-      <Typography variant={"overline"}>INTRODUCING</Typography>
+      <Typography variant={"overline"} className={classes.textGreen}>INTRODUCING</Typography>
       <Typography weight={"bold"} variant={"h4"} gutterBottom>
         活動内容
-    </Typography>
-      <Typography indent={"small"}>
-        当サークルには大きく分けて3つの班があります。<br />
-        1つ目はハード班です。ハード班では、機能創造理工学科の学生や、情報理工学科の学生が電気回路やテスラコイル、アンプの制作に取り組んでいます。<br />
-        次にソフト班です。ソフト班では、主に競技プログラミングの活動をしています。毎週木曜日の5・6限の時間に活動を行っています。また、Webページの管理や、制作も行っています。<br />
-        <br />
       </Typography>
-      <img src="/assets/images/デカテスラ製作機_190403_0036.jpg" alt="テスラコイル" />
+
+      <hr/>
+
+      <div className={classes.container}>
+      <Typography weight={"bold"} variant={"h5"} gutterBottom>
+       電子工作・ハードウェア
+      </Typography>
+
+      </div>
+
+       <img src="/assets/images/デカテスラ製作機_190403_0036.jpg" alt="テスラコイル" />
       <img src="/assets/images/デカテスラ製作機_190403_0074.jpg" alt="テスラコイル" />
       <br />
       <br />
