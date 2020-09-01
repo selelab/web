@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+html, body, footer {
+  background-color: rgb(51,51,51) !important;
+}
+
+header {
+  border-bottom: 1px solid #fff;
+}
 img {
   width: 100%;
 }
