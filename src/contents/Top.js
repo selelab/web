@@ -23,6 +23,9 @@ const styles = ({ breakpoints }) => ({
   textGreen: {
     color: '#92D050',
   },
+  tdnone: {
+    textDecoration: 'none',
+  },
   container: {
     margin: '20px 0px 20px 0px',
   },
@@ -57,6 +60,9 @@ const styles = ({ breakpoints }) => ({
     padding: '2px 0px 2px 8px',
     borderLeft: '3px solid #92D050',
   },
+  indexTwitterImage: {
+    width: 300,
+  },
 });
 
 const Top = ({ classes }) => {
@@ -69,7 +75,7 @@ const Top = ({ classes }) => {
       <Typography weight={"bold"} variant={"h4"} gutterBottom>
         上智大学 エレクトロニクスラボ
       </Typography>
-      <img src="/assets/images/デカテスラ製作機_190403_0036.jpg" alt="テスラコイル" className={classes.indexImage}/>
+      <img src="/assets/images/図2.jpg" alt="テスラコイル" className={classes.indexImage}/>
 
       <div className={classes.container}>
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
@@ -89,6 +95,7 @@ const Top = ({ classes }) => {
 
       <div className={classes.cardArea}>
       <Card className={classes.card}>
+      <a href="/activities/#elecraft" className={classes.tdnone}>
       <CardActionArea>
         
         <CardMedia
@@ -106,13 +113,15 @@ const Top = ({ classes }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
+      </a>
       </Card>
 
       <Card className={classes.card}>
+      <a href="/activities/#programing" className={classes.tdnone}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/assets/images/デカテスラ製作機_190403_0036.jpg"
+          image="/assets/images/図3.png"
           title="プログラミング"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>
@@ -125,6 +134,7 @@ const Top = ({ classes }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
+      </a>
       </Card>
       </div>
       </div>
@@ -141,10 +151,20 @@ const Top = ({ classes }) => {
       <hr />
 
       <div className={classes.container}>
-      ツイッター埋め込み？
+      <Typography weight={"bold"} variant={"h5"} gutterBottom>
+        公式Twitter
+      </Typography>
+      <Typography indent={"small"}>
+        <a href="https://twitter.com/Sophia_ele_lab?s=20" className={classes.textGreen}>@Sophia_ele_lab</a>
+        <br/>
+        <img src="/assets/images/twitter.png" alt="twitter" className={classes.indexTwitterImage}/>
+      </Typography>
+
+
       </div>
 
-    </div>
+
+    </div>//root
   )
 };
 

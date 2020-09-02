@@ -1,6 +1,8 @@
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import React from "react";
+import Slider from "react-slick";
+import RemoveIcon from '@material-ui/icons/Remove';
 
 const styles = ({ breakpoints }) => ({
   root: {
@@ -19,11 +21,32 @@ const styles = ({ breakpoints }) => ({
     color: '#92D050',
   },
   container: {
-    margin: '20px 0px 20px 0px',
+    paddingTop: 100,
+    margin: '-80px 0px 20px 0px',
+    [breakpoints.up("sm")]: {
+      paddingTop: 130,
+      margin: '-110px 0px 20px 0px',
+    },
+  },
+  slider: {
+    marginBottom: 15,
   },
 
 });
-
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  slidesToScroll: 1,
+  speed: 500,
+  fade: true,
+  cssEase: "linear",
+  customPaging: function(i) {
+    return (
+      <RemoveIcon iconStyle={{width: 60}}/>
+    );
+  },
+};
 const Activities = ({ classes }) => {
   document.title = '活動内容 | 上智大学エレクトロニクスラボ';
   return (
@@ -35,40 +58,71 @@ const Activities = ({ classes }) => {
 
       <hr/>
 
-      <div className={classes.container}>
+      <div className={classes.container} id="elecraft">
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
        電子工作・ハードウェア
       </Typography>
 
+      <Slider {...settings} className={classes.slider}>
+        <img src="/assets/images/IMG_05932.JPG" alt=""/>
+        <img src="/assets/images/デカテスラ製作機_190403_0074.jpg" alt=""/>
+        <img src="/assets/images/図4.jpg" alt=""/>
+      </Slider>
+
+      <Typography indent={"small"}>
+        電子工作班は回路設計から基盤製作、組み立てまで行います。ハードとソフトを繋ぐ「境界」の分野にも取り組みます。<br/>今までにオペアンプ、Bluetoothアンプ、テスラコイル、VVVFインバータなどを製作しました。
+      </Typography>
       </div>
 
-       <img src="/assets/images/デカテスラ製作機_190403_0036.jpg" alt="テスラコイル" />
-      <img src="/assets/images/デカテスラ製作機_190403_0074.jpg" alt="テスラコイル" />
-      <br />
-      <br />
-      <br />
+      <hr/>
+
+      <div className={classes.container} id="programing">
+      <Typography weight={"bold"} variant={"h5"} gutterBottom>
+       プログラミング・ソフトウェア
+      </Typography>
+
+      <Slider {...settings} className={classes.slider}>
+        <img src="/assets/images/IMG_215032.jpg" alt="" />
+        <img src="/assets/images/ubuntusample.png" alt="" />
+        <img src="/assets/images/selabgit.png" alt="" />
+      </Slider>
+
+      <Typography indent={"small"}>
+        プログラミング班はPython、JS、などの各種プログラミング言語でホームページやアプリケーションの作成を行っています。<br/>競技プログラミング・AtCoderに参加しているメンバーもいます。
+      </Typography>
+      </div>
+
+      <hr/>
+
+      <div className={classes.container}>
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
         実績
-    </Typography>
+      </Typography>
       <Typography weight={"bold"} variant={"h6"} gutterBottom>
         2019年度
-    </Typography>
+      </Typography>
       <Typography>
         ICPCアジア地区横浜大会出場(1次予選通過)<br />
       </Typography>
       <Typography>
         パワーエレクトロニクス動画コンテスト【優秀賞】<br />
-        <div class="youtube_wrapper">
-          <iframe title="パワーエレクトロニクス動画コンテスト" class="youtube_iframe" src="https://www.youtube.com/embed/R5hyrU2egJY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
       </Typography>
+      <br/>
+
       <Typography weight={"bold"} variant={"h6"} gutterBottom>
         2018年度
-    </Typography>
+      </Typography>
       <Typography>
         ソフィアサマーハッカソン【最優秀賞】<br />
       </Typography>
+      <br/>
+      <div class="youtube_wrapper">
+        <iframe title="パワーエレクトロニクス動画コンテスト" class="youtube_iframe" src="https://www.youtube.com/embed/R5hyrU2egJY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+
     </div>
+
   )
 };
 

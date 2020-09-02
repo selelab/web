@@ -13,6 +13,19 @@ header {
 img {
   width: 100%;
 }
+.slick-dots {
+  position: relative;
+  bottom: -5px;
+}
+.slick-dots li {
+  width: 50px;
+}
+.slick-dots li svg {
+  transform: scale(2.5, 1.5);
+}
+.slick-dots li.slick-active {
+  color: #92D050;
+}
 
 .youtube_wrapper {
   position: relative;
