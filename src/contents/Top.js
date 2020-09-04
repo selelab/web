@@ -109,7 +109,7 @@ const Top = ({ classes }) => {
             <ArrowForwardIosIcon className={classes.arrow}/>
           </Typography>
           <Typography variant="body2" component="p" className={classes.cardSubText}>
-            ハンダに艶を出すのがプロ
+            テスラコイル、LLCコンバータ
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -130,7 +130,7 @@ const Top = ({ classes }) => {
             <ArrowForwardIosIcon className={classes.arrow}/>
           </Typography>
           <Typography variant="body2" component="p" className={classes.cardSubText}>
-            Djangoをすこれ
+            webアプリ、競技プログラミング
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -155,7 +155,7 @@ const Top = ({ classes }) => {
         公式Twitter
       </Typography>
       <Typography indent={"small"}>
-        <a href="https://twitter.com/Sophia_ele_lab?s=20" className={classes.textGreen}>@Sophia_ele_lab</a>
+        <a href="https://twitter.com/Sophia_ele_lab?s=20">@Sophia_ele_lab</a>
         <br/>
         <img src="/assets/images/twitter.png" alt="twitter" className={classes.indexTwitterImage}/>
       </Typography>

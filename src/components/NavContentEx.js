@@ -5,6 +5,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import Icon from "@material-ui/core/Icon";
 import Divider from "@material-ui/core/Divider";
+import { makeStyles } from '@material-ui/styles';
 
 const list = [
   {
@@ -53,8 +54,14 @@ function ListItemTextWithOpenInNewIcon(text) {
   );
 };
 
+const classes = makeStyles({
+  list: {
+  background: '#ddd',
+  },
+});
+
 const NavContentEx = () => (
-  <List>
+  <List className={classes.list}>
     {list.map(({ primaryText, icon, url, external }, i) => (
       <ListItem
         key={primaryText}
