@@ -13,6 +13,10 @@ const styles = ({ spacing, transitions, breakpoints, palette, shape }) => ({
     fontSize: 18,
     color: "#ddd"
   },
+  logo: {
+    color: "#fff",
+    textDecoration: "none",
+  },
   grow: {
     flexGrow: 1
   },
@@ -40,7 +44,7 @@ const styles = ({ spacing, transitions, breakpoints, palette, shape }) => ({
 const HeaderEx = ({ classes, screen }) => (
   <>
     <Typography noWrap color={"textSecondary"} className={classes.header}>
-      上智大学 エレクトロニクスラボ
+      <a href="/" className={classes.logo}>上智大学 エレクトロニクスラボ</a>
     </Typography>
     <div className={classes.grow} />
     {screen === "xs" && (

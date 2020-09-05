@@ -75,7 +75,7 @@ const Top = ({ classes }) => {
       <Typography weight={"bold"} variant={"h4"} gutterBottom>
         上智大学 エレクトロニクスラボ
       </Typography>
-      <img src="/assets/images/図2.jpg" alt="テスラコイル" className={classes.indexImage}/>
+      <img src="/assets/images/index_01.png" alt="" className={classes.indexImage}/>
 
       <div className={classes.container}>
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
@@ -100,7 +100,7 @@ const Top = ({ classes }) => {
         
         <CardMedia
           className={classes.media}
-          image="/assets/images/デカテスラ製作機_190403_0036.jpg"
+          image="/assets/images/hard_00.png"
           title="電子工作"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>
@@ -121,7 +121,7 @@ const Top = ({ classes }) => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/assets/images/図3.png"
+          image="/assets/images/soft_00.png"
           title="プログラミング"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>
@@ -145,7 +145,7 @@ const Top = ({ classes }) => {
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
         年間イベント
       </Typography>
-      <img src="/assets/images/図1.png" alt="テスラコイル"/>
+      <img src="/assets/images/yearEvents.png" alt=""/>
       </div>
 
       <hr />
@@ -155,7 +155,7 @@ const Top = ({ classes }) => {
         公式Twitter
       </Typography>
       <Typography indent={"small"}>
-        <a href="https://twitter.com/Sophia_ele_lab?s=20">@Sophia_ele_lab</a>
+        <a href="https://twitter.com/Sophia_ele_lab?s=20" target="blank">@Sophia_ele_lab</a>
         <br/>
         <img src="/assets/images/twitter.png" alt="twitter" className={classes.indexTwitterImage}/>
       </Typography>

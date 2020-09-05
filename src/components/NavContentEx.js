@@ -54,13 +54,26 @@ function ListItemTextWithOpenInNewIcon(text) {
   );
 };
 
-const classes = makeStyles({
+const useStyles = makeStyles({
   list: {
-  background: '#ddd',
+    color: '#fff',
+  },
+  icon: {
+    color: '#92D050',
+  },
+  listItem: {
+    "&:hover": {
+      backgroundColor: '#222',
+    },
+  },
+  listSelected: {
+    backgroundColor: '#222 !important',
   },
 });
 
-const NavContentEx = () => (
+const NavContentEx = () => {
+  const classes = useStyles();
+  return (
   <List className={classes.list}>
     {list.map(({ primaryText, icon, url, external }, i) => (
       <ListItem
@@ -69,9 +82,11 @@ const NavContentEx = () => (
         button
         component="a" href={url}
         target={external && ("_blank")}
+        classes={{ selected: classes.listSelected }}
+        className={classes.listItem}
       >
         <ListItemIcon>
-          <Icon>{icon}</Icon>
+          <Icon className={classes.icon}>{icon}</Icon>
         </ListItemIcon>
         {external && (
           <ListItemText
@@ -87,13 +102,14 @@ const NavContentEx = () => (
         )}
       </ListItem>
     ))}
-    <Divider style={{ margin: "12px 0" }} />
+    <Divider style={{ margin: "12px 0", backgroundColor: "#999"}} />
     <ListItem
       button
       component="a" href={"mailto:sophiaelelab@gmail.com"}
+      className={classes.listItem}
     >
       <ListItemIcon>
-        <Icon>mail</Icon>
+        <Icon className={classes.icon}>mail</Icon>
       </ListItemIcon>
       <ListItemText
         primary={ListItemTextWithOpenInNewIcon("お問い合わせ")}
@@ -101,7 +117,8 @@ const NavContentEx = () => (
       />
     </ListItem>
   </List>
-);
+  );
+};
 
 NavContentEx.propTypes = {};
 NavContentEx.defaultProps = {};

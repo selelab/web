@@ -64,9 +64,9 @@ const Activities = ({ classes }) => {
       </Typography>
 
       <Slider {...settings} className={classes.slider}>
-        <img src="/assets/images/IMG_05932.JPG" alt=""/>
-        <img src="/assets/images/デカテスラ製作機_190403_0074.jpg" alt=""/>
-        <img src="/assets/images/図4.jpg" alt=""/>
+        <img src="/assets/images/hard_01.png" alt=""/>
+        <img src="/assets/images/hard_02.png" alt=""/>
+        <img src="/assets/images/hard_03.png" alt=""/>
       </Slider>
 
       <Typography indent={"small"}>
@@ -82,9 +82,9 @@ const Activities = ({ classes }) => {
       </Typography>
 
       <Slider {...settings} className={classes.slider}>
-        <img src="/assets/images/IMG_215032.jpg" alt="" />
-        <img src="/assets/images/ubuntusample.png" alt="" />
-        <img src="/assets/images/selabgit.png" alt="" />
+        <img src="/assets/images/soft_01.png" alt="" />
+        <img src="/assets/images/soft_02.png" alt="" />
+        <img src="/assets/images/soft_03.png" alt="" />
       </Slider>
 
       <Typography indent={"small"}>
