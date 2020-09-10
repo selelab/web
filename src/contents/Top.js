@@ -75,7 +75,7 @@ const Top = ({ classes }) => {
       <Typography weight={"bold"} variant={"h4"} gutterBottom>
         上智大学 エレクトロニクスラボ
       </Typography>
-      <img src="/assets/images/index_01.png" alt="" className={classes.indexImage}/>
+      <img src="/assets/images/index_01.jpg" alt="" className={classes.indexImage}/>
 
       <div className={classes.container}>
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
@@ -100,7 +100,7 @@ const Top = ({ classes }) => {
         
         <CardMedia
           className={classes.media}
-          image="/assets/images/hard_00.png"
+          image="/assets/images/hard_00.jpg"
           title="電子工作"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>
@@ -121,7 +121,7 @@ const Top = ({ classes }) => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/assets/images/soft_00.png"
+          image="/assets/images/soft_00.jpg"
           title="プログラミング"
         />
         <CardContent style={{ color: "#fff", backgroundColor: "#444" }}>

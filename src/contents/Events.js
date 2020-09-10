@@ -47,7 +47,7 @@ const Events = ({ classes }) => {
         2019年5月 プログラミング講座 <a href="https://github.com/haruka-kb/elelab/find/master">Github</a> <br/>
         2020年2月 草津合宿 1年生向けにWEBアプリケーションを作るハッカソンを開催しました。<br/>
       </Typography>
-      <img src="/assets/images/kusatsu.png" alt="" />
+      <img src="/assets/images/kusatsu.jpg" alt="" />
 
       </div>
     </div>
