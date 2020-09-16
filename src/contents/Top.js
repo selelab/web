@@ -204,7 +204,7 @@ const Top = () => {
 
       <div className={classes.container}>
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
-        年間イベント
+        年間イベント（2019年実績）
       </Typography>
       <table>
         {eventList}
