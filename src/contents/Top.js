@@ -1,4 +1,4 @@
-import { withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,7 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-const styles = ({ breakpoints }) => ({
+const useStyles = makeStyles(({breakpoints}) => ({
   root: {
     padding: 16,
     [breakpoints.up("sm")]: {
@@ -60,12 +60,73 @@ const styles = ({ breakpoints }) => ({
     padding: '2px 0px 2px 8px',
     borderLeft: '3px solid #92D050',
   },
+  eventTr: {
+    height: 50,
+    paddingLeft: 10,
+  },
+  eventMonth: {
+    color: '#92D050',
+    width: 60,
+    textAlign: 'center',
+  },
+  eventContent: {
+    paddingLeft: 20,
+  },
   indexTwitterImage: {
     width: 300,
   },
-});
+}));
 
-const Top = ({ classes }) => {
+const events = [
+  {
+    month: "4月",
+    content: "フレッシュマンウィーク",
+  },
+  {
+    month: "8月",
+    content: "オープンキャンパス",
+  },
+  {
+    month: "",
+    content: "Maker Faire Tokyo 見学",
+  },
+  {
+    month: "9月",
+    content: "JAXAつくば宇宙センター 見学",
+  },
+  {
+    month: "10月",
+    content: "ソフィア祭",
+  },
+  {
+    month: "11月",
+    content: "部内ハッカソン（ハードウェア）",
+  },
+  {
+    month: "12月",
+    content: "忘年会",
+  },
+  {
+    month: "2月",
+    content: "部内ハッカソン（ソフトウェア）- 冬合宿",
+  },
+  {
+    month: "4月",
+    content: "部内ハッカソン（ソフトウェア）- オンライン",
+  },
+];
+
+const Top = () => {
+  const classes = useStyles();
+  const eventList = events.map(function(item){
+    return (
+      <tr className={classes.eventTr}>
+        <td className={classes.eventMonth}><Typography weight={"bold"} variant={"h5"}>{item.month}</Typography></td>
+        <td className={classes.eventContent}><Typography weight={"bold"} variant={"h6"}>{item.content}</Typography></td>
+      </tr>
+    )
+  });
+
   document.title = '上智大学エレクトロニクスラボ';
   return (
     <div className={classes.root}>
@@ -145,7 +206,9 @@ const Top = ({ classes }) => {
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
         年間イベント
       </Typography>
-      <img src="/assets/images/yearEvents.png" alt=""/>
+      <table>
+        {eventList}
+      </table>
       </div>
 
       <hr />
@@ -168,4 +231,4 @@ const Top = ({ classes }) => {
   )
 };
 
-export default withStyles(styles)(Top);
+export default Top;
