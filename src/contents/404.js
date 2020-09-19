@@ -12,7 +12,8 @@ const styles = ({ breakpoints }) => ({
     },
     [breakpoints.up("md")]: {
       maxWidth: 700
-    }
+    },
+    color: "#fff",
   }
 });
 

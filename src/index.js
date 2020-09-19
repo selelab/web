@@ -48,6 +48,12 @@ const presets = {
 
 const useSidebarStyles = makeStyles(sidebarStyles);
 const useHeaderStyles = makeStyles(headerStyles);
+const useStyles = makeStyles({
+  paper: {
+    background: '#333',
+    borderRight: '1px solid #fff'
+  },
+});
 
 // add presets.create{}() to config props in Root to change the behavior, looking and layout
 // <Root config={presets.createCozyLayout()}> ...
@@ -62,6 +68,7 @@ function App() {
   });
   const sidebarStyles = useSidebarStyles();
   const headerStyles = useHeaderStyles();
+  const classes = useStyles();
   return (
     <MuiThemeProvider theme={createMuiTheme()}>
       {loading ? (
@@ -83,13 +90,13 @@ function App() {
                 <CollapseBtn
                   component={IconButton}
                   className={headerStyles.leftTrigger}
-                  style={{ color: "#ddd" }}
+                  style={{ color: "#92D050" }}
                 >
                   <CollapseIcon />
                 </CollapseBtn>
                 <SidebarTrigger
                   className={headerStyles.leftTrigger}
-                  style={{ color: "#ddd" }}
+                  style={{ color: "#92D050" }}
                 >
                   <SidebarTriggerIcon />
                 </SidebarTrigger>
@@ -100,13 +107,11 @@ function App() {
             <Content>
               {data.content && <ContentEx />}
             </Content>
-            <Sidebar>
+            <Sidebar classes={{ paper: classes.paper }}>
               {({ collapsed }) => (
-                <>
-                  <div className={sidebarStyles.container}>
-                    {data.nav && <NavContentEx />}
-                  </div>
-                </>
+                <div className={sidebarStyles.container}>
+                  {data.nav && <NavContentEx />}
+                </div>
               )}
             </Sidebar>
             <Footer>{data.footer && <FooterEx />}</Footer>
