@@ -60,7 +60,7 @@ const Activities = ({ classes }) => {
 
       <div className={classes.container} id="elecraft">
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
-       電子工作・ハードウェア
+       電子工作・ハードウェア開発
       </Typography>
 
       <Slider {...settings} className={classes.slider}>
@@ -70,7 +70,7 @@ const Activities = ({ classes }) => {
       </Slider>
 
       <Typography indent={"small"}>
-        電子工作班は回路設計から基盤製作、組み立てまで行います。ハードとソフトを繋ぐ「境界」の分野にも取り組みます。<br/>今までにオペアンプ、Bluetoothアンプ、テスラコイル、VVVFインバータなどを製作しました。
+        電子工作班は、回路設計・基盤製作から組み立てまで、幅広い活動をしています。ハードとソフトを繋ぐ「境界」の分野にも取り組みます。<br/>今までにオペアンプ、Bluetoothアンプ、テスラコイル、VVVFインバータなどを製作しました。
       </Typography>
       </div>
 
@@ -78,7 +78,7 @@ const Activities = ({ classes }) => {
 
       <div className={classes.container} id="programing">
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
-       プログラミング・ソフトウェア
+       プログラミング・ソフトウェア開発
       </Typography>
 
       <Slider {...settings} className={classes.slider}>
@@ -88,7 +88,19 @@ const Activities = ({ classes }) => {
       </Slider>
 
       <Typography indent={"small"}>
-        プログラミング班はPython、JS、などの各種プログラミング言語でホームページやアプリケーションの作成を行っています。<br/>競技プログラミング・AtCoderに参加しているメンバーもいます。
+        プログラミング班は、Python・JavaScript・C++などの各種プログラミング言語を使い、Webフロントエンド開発やアプリケーション開発などを行っています。<br/>また競技プログラマーとして、AtCoder・Codeforcesなどの各種コンテストに参加しているメンバーもいます。
+      </Typography>
+      </div>
+
+      <hr/>
+
+      <div className={classes.container} id="programing">
+      <Typography weight={"bold"} variant={"h5"} gutterBottom>
+          その他
+      </Typography>
+        
+      <Typography indent={"small"}>
+        上で説明したもの以外でも、技術に関することなら何でもエレラボの守備範囲内です！<br/>例えば3DCG、ゲームプログラミング、人工知能などに興味がある方も、エレラボで活動してみませんか？
       </Typography>
       </div>
 

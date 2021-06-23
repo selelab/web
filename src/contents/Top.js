@@ -116,6 +116,21 @@ const events = [
   },
 ];
 
+const links = [
+  {
+    url: "https://twitter.com/sophia_ele_lab",
+    title: "上智エレラボ公式Twitter (@sophia_ele_lab)"
+  },
+  {
+    url: "https://selelab.hatenablog.com/",
+    title: "ブログ | 上智大学エレクトロニクスラボ"
+  },
+  {
+    url: "https://github.com/selelab/",
+    title: "Sophia Electronics Lab - GitHub Organization"
+  }
+]
+
 const Top = () => {
   const classes = useStyles();
   const eventList = events.map(function(item){
@@ -123,6 +138,13 @@ const Top = () => {
       <tr className={classes.eventTr}>
         <td className={classes.eventMonth}><Typography weight={"bold"} variant={"h5"}>{item.month}</Typography></td>
         <td className={classes.eventContent}><Typography weight={"bold"} variant={"h6"}>{item.content}</Typography></td>
+      </tr>
+    )
+  });
+  const linkList = links.map(function(item){
+    return (
+      <tr className={classes.linkTr}>
+        <td className={classes.linkUrl}><Typography weight={"bold"} variant={"h6"}><a href={item.url} target="blank">{item.title}</a></Typography></td>
       </tr>
     )
   });
@@ -142,9 +164,11 @@ const Top = () => {
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
         「理系」サークルのエレラボ
       </Typography>
-      <Typography indent={"small"}>
-        我々は2018年5月23日に結成し、現在では上智大学の理工学部や経済学部の学生を中心として、様々な大学の人が集まり、活動をしています。
-      </Typography>
+        <Typography indent={"small"}>
+        私たち「上智大学エレクトロニクス研究部」・通称『エレラボ』は、上智大学公認の課外活動団体として設立されたインカレサークルです。<br/>
+        プログラミング・電子工作を始めとする、理工学系の分野を中心とした様々な活動を行っています。<br />
+        文系の方も大歓迎です！経験者による講習会も開催しています。
+        </Typography>
       </div>
 
       <hr/>
@@ -213,7 +237,7 @@ const Top = () => {
 
       <hr />
 
-      <div className={classes.container}>
+      {/* <div className={classes.container}>
       <Typography weight={"bold"} variant={"h5"} gutterBottom>
         公式Twitter
       </Typography>
@@ -222,8 +246,17 @@ const Top = () => {
         <br/>
         <img src="/assets/images/twitter.png" alt="twitter" className={classes.indexTwitterImage}/>
       </Typography>
+      </div>
 
+      <hr /> */}
 
+      <div className={classes.container}>
+      <Typography weight={"bold"} variant={"h5"} gutterBottom>
+        外部リンク
+      </Typography>
+      <table>
+        {linkList}
+      </table>
       </div>
 
 
